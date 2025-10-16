@@ -1,17 +1,20 @@
-# My_io
-One-click AI video generator that creates full videos with narration, visuals, and captions.
-import React, { useState } from "react";
-
-// One-Click AI Video Generator
-// - Single-file React component (TailwindCSS classes used for styling)
-// - Frontend UI for: topic input, ratio selection, length (max 10 minutes), provider toggles (Sora, Veo, Speechify)
-// - One-click calls a backend endpoint (/api/generate) that orchestrates AI services
-// - The backend snippet (Node/Express) is included at the bottom as a commented block. You MUST implement server-side logic
-//   for API keys, moderation, and to call providers' APIs securely.
-//
-// How to use:
-// 1) Install Tailwind + React in your project (or paste this into a create-react-app + Tailwind setup).
-// 2) Create a server endpoint /api/generate (example Node snippet below) and add your provider API keys there.
+{
+  "name": "my-io",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
 // 3) Deploy frontend and backend. Frontend calls backend which returns a { jobId, status, resultUrl } or streams progress.
 //
 // Important: This component does not contain secret keys and does no real AI calls — backend must do them.
